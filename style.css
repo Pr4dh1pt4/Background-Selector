@@ -1,0 +1,79 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    transition: all 0.7s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all 1s ease-in-out;
+}
+
+.box {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(202, 198, 198);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.refresh {
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(202, 198, 198);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+}
+
+.red {
+    background-color: rgb(205, 46, 46);
+    cursor: pointer;
+}
+
+.green {
+    background-color: rgb(90, 184, 90);
+    cursor: pointer;
+}
+
+.blue {
+    background-color: rgb(45, 45, 212);
+    cursor: pointer;
+}
+
+.black {
+    background-color: rgb(23, 21, 21);
+    cursor: pointer;
+    color: white;
+}
+

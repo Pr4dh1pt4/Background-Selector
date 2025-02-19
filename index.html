@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="title">PILIH BACKGROUND</div>
+        <div class="box">
+            <div class="circle red"></div>
+            <div class="circle green"></div>
+            <div class="circle blue"></div>
+            <div value="black" class="circle black"></div>
+        </div>
+        <button onclick="refresh()" class="refresh">REFRESH</button>
+    </div>
+    
+    <script>
+        const circles = document.querySelectorAll('.circle');
+        const title = document.querySelector('.title');
+        
+        circles.forEach(circle => {
+            circle.addEventListener('click', ({target}) => {
+                const {backgroundColor} = getComputedStyle(target);
+                document.body.style.backgroundColor = backgroundColor;
+                if (target.classList.contains('black')) {
+                    title.style.color = 'white';
+                } else {
+                    // Jika lingkaran lain diklik, kembalikan warna teks judul ke default (hitam)
+                    title.style.color = 'black';
+                }
+            })
+        })
+
+        function refresh(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>
